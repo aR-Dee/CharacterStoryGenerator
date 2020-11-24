@@ -1,1 +1,1 @@
-# CharacterStoryGenerator
+# Character-Story Generator
