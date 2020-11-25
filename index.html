@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="cover.css">
   </head>
 <body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" crossorigin="anonymous">
-</script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 <div class="cover-container d-flex w-100 h-200 p-3 mx-auto flex-column">
   <header class="masthead mb-auto">
@@ -24,12 +24,49 @@
   <main role="main" class="inner cover">
     <h1 class="cover-heading">Make your illustrations with a story!</h1>
     <p class="lead">Hit the button as many times as you need untill you feel it is right :)</p>
-    <p class="lead">
-      <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
-    </p>
-    <p class="generated-story">
 
+<form>
+<div class="row">
+  <div class="form-group col-sm-4">
+    <h2><label class="label label-primary">Character:</label></h2>
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="char_generic_box" value="character.generic" checked>
+        <label class="custom-control-label" for="char_generic_box">Generic</label>
+      </div>
+
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" id="char_games_box" value="character.game" checked>
+      <label class="custom-control-label" for="char_games_box">Games</label>
+    </div>
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="char_anime_box" value="character.anime" checked>
+        <label class="custom-control-label" for="char_anime_box">Anime/Manga</label>
+      </div>
+    </div>
+      <div class="form-group col-sm-4">
+    <h2><label class="label label-primary">Action:</label></h2>
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="action_generic_box" value="action.generic" checked>
+        <label class="custom-control-label" for="action_generic_box"  >Generic</label>
+      </div>
+
+    </div>
+          <div class="form-group col-sm-4">
+    <h2><label class="label label-primary">Place:</label></h2>
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="place_generic_box" value="place.generic" checked>
+        <label class="custom-control-label" for="char_generic_box">Generic</label>
+      </div>
+    
+    </div>
+    </div>
+  </form>
+    <p class="lead">
+      <a href="#" class="randomizer-btn btn btn-lg btn-secondary">SHUFFLE!</a>
     </p>
+    <div class="generated-story">
+
+    </div>
   </main>
 
   <footer class="mastfoot mt-auto">
