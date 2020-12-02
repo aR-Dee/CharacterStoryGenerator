@@ -32,7 +32,12 @@ function generateStory(filtered){
         if(filtered[i].search("action") != -1){action = action.concat(getStoryPart(filtered[i]))}
     }
 
-    console.log(character, place, action);
+    var rndChar = rndElementPickup(character);
+    var rndPlace = rndElementPickup(place);
+    var rndAct = rndElementPickup(action).toLowerCase();
+    var rndPlaceGlue = rndElementPickup(placement).toLowerCase();
+
+    return rndChar +" "+ rndAct +" "+ rndPlaceGlue +" "+ rndPlace;
 }
 
 function getStoryPart(filteredObj){
@@ -40,8 +45,8 @@ function getStoryPart(filteredObj){
     return gInfo[a[0]][a[1]]
 }
 
-function arrayMerger(listToMerge){
-
+function rndElementPickup(elArray){
+    return singleRandom = elArray[Math.floor(Math.random() * elArray.length)];
 }
 
 function storyFilter(){
@@ -56,6 +61,23 @@ let filtered_sections = [];
     return filtered_sections
 }
 
+function checkBoxStates(){
+    var charChecks = validateChecks(document.querySelectorAll("input.char_box"));
+    var placeChecks = validateChecks(document.querySelectorAll("input.action_box"));
+    var actionChecks = validateChecks(document.querySelectorAll("input.place_box"));
+
+    if(charChecks & placeChecks & actionChecks) return true
+    else return false
+}
+
+function validateChecks(boxChecks){
+    var counter = 0;
+    for(i in boxChecks){
+        if (boxChecks[i].checked == true) counter ++;
+        }
+    if (counter >= 1 ) return true
+    else return false
+}
 
 $(document).ready(function(){
 
@@ -66,11 +88,18 @@ $(document).ready(function(){
     filtered = [gInfo.character.fanart, gInfo.place.generic, gInfo.action.generic]
     }, 2000);
 */
+
 $('.randomizer-btn').on('click', function(event){
     event.preventDefault();
-    filtered = storyFilter();
-    //console.log(storyFilter());
-    story = generateStory(storyFilter());
-
+    if(!checkBoxStates()){
+        $("#checkbox-error").show();
+    }
+    else{
+        $("#checkbox-error").hide();
+        filtered = storyFilter();
+        //console.log(storyFilter());
+        story = generateStory(storyFilter());
+        $(".generated-story").text(story)
+        console.log(story);}
     });
 });
