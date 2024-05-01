@@ -1,4 +1,4 @@
-    var placement = ["in","at","over","under", "in front of", "at the back of"];
+    var placement = ["in","at","over","under", "in front of", "at the back of", "at a side of", "next to"];
     var gInfo;
     let filtered = [];
 
@@ -16,11 +16,6 @@
     }
     return g_info;
 };
-
-function displayStory(){
-
-
-}
 
 function generateStory(filtered){
     let character = [], action = [], place = [];
@@ -84,7 +79,7 @@ $(document).ready(function(){
     gInfo = loadJSONfiles()
 
 //for debug only
-/*    setTimeout (() => {
+/*   setTimeout (() => {
     filtered = [gInfo.character.fanart, gInfo.place.generic, gInfo.action.generic]
     }, 2000);
 */
