@@ -1,4 +1,29 @@
 {
-    "generic":["reading a book","casting a spell","saying goodbye","cooking","looking in the distance","seeing someone familiar", "sleeping","looking at a map", "drinking wine"],
-    "medieval":["swinging rapier"]
+    "generic":
+    [
+        "reading a book",
+        "casting a spell",
+        "saying goodbye",
+        "cooking",
+        "looking in the distance",
+        "seeing someone familiar",
+        "sleeping",
+        "looking at a map",
+        "drinking wine",
+        "in a fetal position",
+        "exercising",
+        "petting a cat",
+        "loading a gun",
+        "dancing",
+        "playing an instrument",
+        "eating a snack",
+        "looking distressed",
+        "being sad",
+        "being high"
+    ],
+    "medieval":
+    [
+        "swinging rapier",
+        "shooting a  cannon"
+    ]
 }

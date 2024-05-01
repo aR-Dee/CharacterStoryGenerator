@@ -1,4 +1,37 @@
 {
-    "generic":["a forest","a mountain overlook","a garden","a throne room","castle ramparts","a cafe","a living room","a balcony","a study","a reading nook","a window seat"],
-    "sci-fi":["Alderan","Mars"]
+    "generic":
+    [
+        "a forest",
+        "a mountain overlook",
+        "a garden",
+        "a cafe",
+        "a living room",
+        "a balcony",
+        "a study",
+        "a reading nook",
+        "a window seat",
+        "a business meeting",
+        "a commercial airplane cockpit",
+        "a military camp",
+        "a car dealership",
+        "convenience store",
+        "a bridge",
+        "the sewers",
+        "the gym",
+        "the mines",
+        "a bar",
+        "a restaurant"
+    ],
+    "sci-fi":
+    [
+        "planet Alderan",
+        "plnet Mars"
+    ],
+    "medieval":
+    [
+        "castle ramparts",
+        "a throne room",
+        "a tavern"
+    ]
+
 }
